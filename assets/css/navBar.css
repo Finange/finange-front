@@ -1,13 +1,10 @@
 /* Projeto base navbar */
 /* https://github.com/tigercodes-io/navbar */
+
 a {
-  color: #3B3B3B !important;
+  color: var(--white);
   text-decoration: none !important;
   transition: 0.3s;
-}
-
-a:hover {
-  opacity: 0.7;
 }
 
 .logo {
@@ -23,33 +20,18 @@ a:hover {
   margin: 10px;
 }
 
-#linkTopo {
-  text-decoration: none;
-  color: #fff;
-  background-color: #3B3B3B;
-  padding: 10px;
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-  border-radius: 50%;
-}
-
 .ajustaLogo {
   display: flex;
   justify-content: space-around;
   align-items: inherit;
-  font-family: 'Poppins', sans-serif;
-  background: #E0E0E0;
   height: 8vh;
   margin-left: -15vh;
 }
 
-
 nav {
   display: flex;
-  height: 80px;
-  /* width: 100%; */
-  background-color: #E0E0E0;
+  height: 60px;
+  background-color: var(--dark_blue);
   align-items: center;
   justify-content: space-around;
   padding: 0 50px 0 100px;
@@ -58,10 +40,10 @@ nav {
   z-index: 1;
 }
 
-
 .nav-list {
   list-style: none;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   z-index: 2;
 }
@@ -80,150 +62,95 @@ nav {
   transition: all 0.3s ease;
 }
 
-
 .nav-list li a.active,
 .nav-list li a:hover {
-  background: #6d6c6c;
+  color: var(--green);
 }
 
 nav .menu-btn i {
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
   display: none;
 }
 
+/* Botão de login */
 nav .login-btn {    
   padding: 8px 15px;
   border-radius: 5px;
-  background-color: #6d6c6c;
+  border: 3px solid var(--dark_gray);
+  background-color: var(--dark_gray);
+  border: 3px solid var(--white);
   font-size: 18px;
   font-weight: 500;
-  font-family: 'Poppins', sans-serif;
 }
+
+nav .login-btn:hover{
+  border: 3px solid var(--green);
+}
+  
+nav .login-btn a:hover{
+  color: var(--white)
+}
+/* Fim do botão */
 
 /* fim barra de nav */
 
-@media (max-width: 999px) {
+  @media (max-width: 999px) {
 
-  body {
-    overflow-x: hidden;
+    body {
+      overflow-x: hidden;
+    }
+
+    .logo {
+      font-size: 17px;
+    }
+
+    .ajustaLogo {
+      margin-left: -7vh;
+    }
+
+    .logoImg {
+      display: none;
+    }
+
+    nav .menu-btn i {
+      display: block;
+    }
+
+    nav .nav-list {
+      position: fixed;
+      top: 60px;
+      left: -100%;
+      background-color: var(--dark_gray);
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    nav ul.open {
+      left: 0;
+    }
+
+    .nav-list li {
+      width: 100%;
+      margin: 50px 0;
+    }
+
+    .nav-list li a {
+      font-size: 23px;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      background: none;
+    }
+
+    /* Botão de login */
+    nav .login-btn {    
+      width: 150px;
+      margin: auto;
+    }
+    /* fim do botão */
   }
-
-  .logo {
-    font-size: 17px;
-  }
-
-  .ajustaLogo {
-    display: flex;
-    justify-content: space-around;
-    align-items: inherit;
-    font-family: 'Poppins', sans-serif;
-    background: #E0E0E0;
-    height: 8vh;
-    margin-left: -7vh;
-  }
-
-  .logoImg {
-    display: none;
-  }
-
-  nav .menu-btn i {
-    display: block;
-  }
-
-  nav .nav-list {
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background-color: #C6C7C2;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: block !important;
-    transition: all 0.3s ease;
-  }
-
-  nav ul.open {
-    left: 0;
-    z-index: 2;
-  }
-
-  .nav-list li {
-    width: 100%;
-    margin: 50px 0;
-  }
-
-  .nav-list li a {
-    font-size: 23px;
-  }
-
-  nav ul li a.active,
-  nav ul li a:hover {
-    background: none;
-    color: #928d8d;
-  }
-}
-
-
-
-
-
-@media (max-width: 999px) {
-
-  body {
-    overflow-x: hidden;
-  }
-
-  .logo {
-    font-size: 17px;
-  }
-
-  .ajustaLogo {
-    display: flex;
-    justify-content: space-around;
-    align-items: inherit;
-    font-family: 'Poppins', sans-serif;
-    background: #E0E0E0;
-    height: 8vh;
-    margin-left: -7vh;
-  }
-
-  .logoImg {
-    display: none;
-  }
-
-  nav .menu-btn i {
-    display: block;
-  }
-
-  nav .nav-list {
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background-color: #C6C7C2;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: block;
-    transition: all 0.3s ease;
-  }
-
-  nav ul.open {
-    left: 0;
-  }
-
-  .nav-list li {
-    width: 100%;
-    margin: 50px 0;
-  }
-
-  .nav-list li a {
-    font-size: 23px;
-  }
-
-  nav ul li a.active,
-  nav ul li a:hover {
-    background: none;
-    color: #928d8d;
-  }
-}

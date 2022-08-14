@@ -1,13 +1,5 @@
-:root {
-	--primaFont: Montserrat, sans-serif;
-	--white: #f5f5f5;
-	--gray: #beb9b9;
-	--softGray: #e3e1e1;
-	--green: #3eff7d;
-}
-
 * {
-	font-family: var(--primaFont);
+	font-family: var(--primalFont);
 }
 
 a {
@@ -18,7 +10,6 @@ li {
 	list-style: none;
 }
 
-
 .sign_up, .log_in {
 	margin: 80px auto;
 	padding: 20px 30px;
@@ -28,7 +19,7 @@ li {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	background-color: var(--softGray);
+	background-color: var(--gray);
 }
 
 .log_in {
@@ -48,7 +39,7 @@ li {
 	padding: 15px 40px;
 	display: inline-flex;
 	justify-content: center;
-	background-color: white;
+	background-color: var(--white);
 	border-radius: 8px;
 }
 
@@ -75,7 +66,7 @@ form input {
 	font-size: 12pt;
 	margin-bottom: 10px;
 	border-radius: 6px;
-	border: 0.12rem solid var(--gray);
+	border: 0.12rem solid var(--dark_gray);
 	padding-left: 5px;
 }
 
@@ -86,7 +77,7 @@ form button {
 	font-size: 18px;
 	font-weight: bold;
 	border-radius: 6px;
-	border: 2px solid black;
+	border: 2px solid var(--dark_blue);
 	cursor: pointer;
 }
 
